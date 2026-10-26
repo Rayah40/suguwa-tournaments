@@ -12,6 +12,17 @@ GitHub에 올린 코드를 Cloudflare Workers가 자동으로 빌드·배포합�
 3. **Commit changes**를 누릅니다.
 4. 1~3분 뒤 사이트에 반영됩니다. 진행 상황은 Cloudflare 대시보드의 Workers → suguwa-tournaments → Deployments에서 확인할 수 있습니다.
 
+### 대회 사진
+
+사진은 아래 순서로 정해집니다. 신규 대회도 따로 할 일 없이 실제 도시 사진이 붙습니다.
+
+1. **직접 올린 사진**: `public/cities/<대회ID>.jpg` 파일(png, webp도 가능)이 있으면 가장 먼저 씁니다. 예: `public/cities/TRN-2027-USA-HAW-001.jpg`. 자동으로 찾은 사진이 마음에 들지 않을 때 이 이름으로 업로드하면 교체됩니다. JSON은 고칠 필요가 없습니다.
+2. **에이전트가 준 사진**: `tournaments.json`의 `visual.image_url`
+3. **자동 검색 사진**: 위 둘이 없으면 배포할 때마다 해당 도시의 Wikipedia 문서에서 Wikimedia Commons의 무료 라이선스(CC BY·CC BY-SA·CC0·퍼블릭 도메인) 가로 사진을 찾아 씁니다. 촬영자와 라이선스는 대회 상세 페이지에 자동 표기됩니다. 어떤 사진이 선택됐는지는 Cloudflare 빌드 로그의 `도시 사진 자동 검색`에 나옵니다.
+4. 사진을 찾지 못하거나 사진 링크가 깨지면 기본 수구 경기장 사진을 표시합니다.
+
+가로형 이미지(16:10 정도, 1200px 이상)가 잘 맞습니다.
+
 ### 데이터에 오류가 있으면
 
 빌드 전에 `scripts/prepare-data.mjs`가 데이터를 검사합니다. 오류가 있으면 **배포가 중단되고 공개 사이트는 이전 상태로 유지됩니다.**
@@ -29,7 +40,7 @@ GitHub에서 `data/tournaments.json` → **History**를 열면 주차별 버전�
 |---|---|---|
 | `data/tournaments.json` | 전체 대회 데이터 (에이전트 출력물) | 매주 |
 | `data/changes/*.json` | 주차별 변경 내역 → 새소식 페이지 | 매주 추가 |
-| `public/cities/` | 사이트에 직접 저장된 도시 사진 | 가끔 |
+| `public/cities/` | 대회 사진 (`<대회ID>.jpg`) | 신규 대회 시 |
 | `app/` | 화면 코드 (디자인·문구) | 디자인 변경 시 |
 | `scripts/prepare-data.mjs` | 데이터 검사 | 데이터 규격 변경 시 |
 | `docs/agent-instructions.md` | 에이전트 출력 규격 | 규격 변경 시 |

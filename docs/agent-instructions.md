@@ -44,7 +44,7 @@
 - `country_code`: ISO 3166-1 alpha-2 소문자 (예: us, jp, es). 국기 표시에 씁니다.
 - `region`: 다음 중 하나만 씁니다. `Eastern Europe`, `Western Europe`, `North America`, `South America`, `Oceania`, `Central Asia`, `East Asia`(동남아 포함), `South Asia`, `West Asia`, `Africa`, `Other`.
 - `ko`: 한국어 사용자에게 보이는 문구입니다. `city`, `country`, `notes`는 필수입니다. **영문 데이터가 바뀌면 `ko` 문구도 반드시 함께 고쳐 주세요.** 예를 들어 상태가 PAST로 바뀌면 "아직 종료된 대회가 아닙니다" 같은 이전 문구를 남기지 마세요.
-- `visual`: 도시 사진입니다. **Wikimedia Commons 이미지만** 사용하고, 작성자와 라이선스를 정확히 적어 주세요. 적합한 이미지가 없으면 `null` (사이트에는 기본 배경이 표시됩니다). 기존 대회의 visual은 문제가 없으면 그대로 유지합니다. 단, `/cities/`로 시작하는 경로는 사이트에 저장된 사진이므로 그대로 두세요.
+- `visual`: 도시 사진입니다. **Wikimedia Commons 이미지만** 사용하고, 작성자와 라이선스를 정확히 적어 주세요. 라이선스를 확인할 수 없으면 추측하지 말고 `null`로 두세요. `null`이면 사이트가 배포할 때 Wikipedia/Commons에서 도시 사진을 자동으로 찾아 붙입니다. 기존 대회의 visual은 문제가 없으면 그대로 유지합니다. 단, `/cities/`로 시작하는 경로는 사이트에 저장된 사진이므로 그대로 두세요.
 
 ## [2] YYYY-MM-DD.json (변경 내역)
 

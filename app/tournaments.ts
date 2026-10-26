@@ -1,4 +1,13 @@
 import source from "../data/tournaments.json";
+// Photos dropped into public/cities/<tournament_id>.jpg|png|webp (found by scripts/prepare-data.mjs)
+import localImagesJson from "./generated/local-images.json";
+const localImages = localImagesJson as Record<string, string>;
+// Photos found automatically at build time on Wikimedia Commons (scripts/photo-lookup.mjs)
+import autoPhotosJson from "./generated/auto-photos.json";
+type AutoPhoto = { image_url: string; source_page: string; credit: string; license_url: string };
+const autoPhotos = autoPhotosJson as Record<string, AutoPhoto>;
+/** Shown when a tournament has no photo at all, or its photo link is broken. */
+export const FALLBACK_PHOTO = "/water-polo-tournament-venue-daylight.png";
 export type Status =
   | "ANNOUNCED"
   | "UPCOMING"
@@ -164,7 +173,7 @@ export const statusKo: Record<Status, string> = {
   UNKNOWN: "접수 상태 미확인",
 };
 type Visual = {
-  image: string | null;
+  image: string;
   source: string | null;
   flag: string;
   cityKo: string;
@@ -180,10 +189,10 @@ export const visuals: Record<string, Visual> = Object.fromEntries(
   (source.tournaments as RawRecord[]).map((t) => [
     t.tournament_id,
     {
-      image: t.visual?.image_url ?? null,
-      source: t.visual?.source_page ?? null,
-      credit: t.visual?.credit ?? undefined,
-      licenseUrl: t.visual?.license_url ?? undefined,
+      image: localImages[t.tournament_id] ?? t.visual?.image_url ?? autoPhotos[t.tournament_id]?.image_url ?? FALLBACK_PHOTO,
+      source: localImages[t.tournament_id] ? null : t.visual?.source_page ?? autoPhotos[t.tournament_id]?.source_page ?? null,
+      credit: localImages[t.tournament_id] ? undefined : t.visual?.credit ?? autoPhotos[t.tournament_id]?.credit ?? undefined,
+      licenseUrl: localImages[t.tournament_id] ? undefined : t.visual?.license_url ?? autoPhotos[t.tournament_id]?.license_url ?? undefined,
       flag: `https://flagcdn.com/w80/${t.country_code}.png`,
       cityKo: t.ko.city,
       countryKo: t.ko.country,

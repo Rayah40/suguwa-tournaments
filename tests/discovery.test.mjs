@@ -69,10 +69,10 @@ test("October 26 import: 23 records, stable numbers, new events without photos r
  const japan=data.tournaments.find(t=>t.id==="TRN-2027-JPN-WMG-001");
  assert.equal(japan.start,"2027-05-28");assert.equal(japan.eventStart,"2027-05-14");
  const barcelona=data.tournaments.find(t=>t.id==="TRN-2027-ESP-001");assert.equal(barcelona.registrationPhase,"PRE_REGISTRATION");assert(renderToStaticMarkup(React.createElement(Detail,{t:barcelona})).includes("팀 사전등록 열기"));
- for(const t of data.tournaments){assert.equal(t.checked,"2026-10-26");const img=data.visuals[t.id].image;if(img&&img.startsWith("/"))assert(fs.existsSync("public"+img));}
+ for(const t of data.tournaments){assert.equal(t.checked,"2026-10-26");const img=data.visuals[t.id].image;assert(img);if(img.startsWith("/"))assert(fs.existsSync("public"+img));}
  const kona=data.tournaments.find(t=>t.id==="TRN-2027-USA-KON-001");
- assert.equal(data.visuals[kona.id].image,null);
- for(const lang of ["ko","en"]){language=lang;const card=renderToStaticMarkup(React.createElement(ui.EventCard,{t:kona}));assert(card.includes("photo-unavailable"));assert(!card.includes("<img class=\"city-photo-main\""));assert(card.includes(lang==="ko"?"2027년 3월 말 또는 4월 초":"Late March or early April 2027"));}
+ assert.equal(data.visuals[kona.id].image,"/water-polo-tournament-venue-daylight.png");
+ for(const lang of ["ko","en"]){language=lang;const card=renderToStaticMarkup(React.createElement(ui.EventCard,{t:kona}));assert(card.includes("city-photo-main"));assert(card.includes("water-polo-tournament-venue-daylight.png"));assert(card.includes(lang==="ko"?"2027년 3월 말 또는 4월 초":"Late March or early April 2027"));}
 });
 test("What's New lists latest week first with Korean summaries",()=>{
  language="ko";const html=renderToStaticMarkup(React.createElement(load("app/whats-new/page.tsx").default));

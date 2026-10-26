@@ -2,6 +2,7 @@
 // If anything is wrong, the build stops here and the live site stays as it was.
 import fs from "node:fs";
 import path from "node:path";
+import { findCityPhoto } from "./photo-lookup.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const errors = [];
@@ -27,10 +28,19 @@ function readJson(file) {
   }
 }
 
+// ---- photos dropped into public/cities/<tournament_id>.<ext> ----
+const citiesDir = path.join(root, "public/cities");
+const localImages = {};
+for (const f of fs.existsSync(citiesDir) ? fs.readdirSync(citiesDir) : []) {
+  const m = f.match(/^(TRN-[A-Z0-9-]+)\.(jpe?g|png|webp)$/i);
+  if (m) localImages[m[1]] = "/cities/" + f;
+}
+
 // ---- tournaments.json ----
 const dataFile = path.join(root, "data/tournaments.json");
 const data = readJson(dataFile);
 const ids = new Set();
+const needPhoto = [];
 if (data) {
   if (!isDate(data.generated_at)) err("tournaments.json", "generated_at 이 YYYY-MM-DD 날짜가 아닙니다");
   if (!Array.isArray(data.tournaments) || data.tournaments.length === 0) err("tournaments.json", "tournaments 배열이 비어 있습니다");
@@ -65,7 +75,8 @@ if (data) {
     }
     // Photo
     const v = t.visual;
-    if (v === null || v === undefined) warn(at, "visual(도시 사진)이 없어 기본 배경으로 표시됩니다");
+    if (localImages[id]) { /* a photo file in public/cities/ takes priority */ }
+    else if (v === null || v === undefined) needPhoto.push(t);
     else if (typeof v !== "object") err(at, "visual 은 객체 또는 null 이어야 합니다");
     else {
       if (typeof v.image_url !== "string" || !(v.image_url.startsWith("/") || isUrl(v.image_url))) err(at, "visual.image_url 이 URL 또는 /로 시작하는 경로가 아닙니다");
@@ -113,6 +124,28 @@ if (errors.length) {
   console.error(`\n데이터 오류 ${errors.length}건 — 배포를 중단합니다. 공개 사이트는 이전 상태로 유지됩니다.\n${errors.join("\n")}\n`);
   process.exit(1);
 }
+// ---- automatic city photos (Wikipedia / Wikimedia Commons) ----
+// For tournaments with neither a photo file nor visual.image_url, look up a freely
+// licensed photo of the city. Set SKIP_PHOTO_LOOKUP=1 to skip (offline builds).
+const autoPhotos = {};
+if (needPhoto.length && process.env.SKIP_PHOTO_LOOKUP !== "1") {
+  console.log(`\n도시 사진 자동 검색 — ${needPhoto.length}건`);
+  for (const t of needPhoto) {
+    try {
+      const photo = await findCityPhoto(t);
+      if (photo) {
+        autoPhotos[t.tournament_id] = photo;
+        console.log(`  ✓ ${t.tournament_id} (${t.city}): ${photo.file} · ${photo.credit}`);
+      } else console.log(`  ! ${t.tournament_id} (${t.city}): 조건에 맞는 사진을 찾지 못해 기본 경기장 사진으로 표시합니다`);
+    } catch (e) {
+      console.log(`  ! ${t.tournament_id} (${t.city}): 사진 검색 실패 (${e.message}) — 기본 경기장 사진으로 표시합니다`);
+    }
+  }
+  console.log(`  직접 고른 사진을 쓰려면 public/cities/<대회ID>.jpg 로 업로드하세요.`);
+}
+
 fs.mkdirSync(path.join(root, "app/generated"), { recursive: true });
+fs.writeFileSync(path.join(root, "app/generated/auto-photos.json"), JSON.stringify(autoPhotos, null, 1));
+fs.writeFileSync(path.join(root, "app/generated/local-images.json"), JSON.stringify(localImages, null, 1));
 fs.writeFileSync(path.join(root, "app/generated/changes.json"), JSON.stringify({ headlines, changes: merged }, null, 1));
 console.log(`\n데이터 확인 완료 — 대회 ${ids.size}건, 변경 내역 ${merged.length}건\n`);

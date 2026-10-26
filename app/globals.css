@@ -1776,3 +1776,4 @@ footer>span{font-size:14px}
 @media(max-width:600px){.hero-photo img{height:280px;min-height:0}.hero-photo figcaption{max-width:90%}.hero-photo .hero-note{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.event-card:hover,.calendar-event:hover,.summary-card:active,.calendar-event:active{transform:none!important}}
 .registration-component{display:contents}.detail-note p,.format-box p{white-space:pre-line}
+

@@ -11,7 +11,7 @@
     "build": "npm run data && vinext build",
     "deploy": "wrangler deploy",
     "start": "vinext start",
-    "check": "npm run data && tsc --noEmit -p tsconfig.ui.json && node --test tests/discovery.test.mjs",
+    "check": "SKIP_PHOTO_LOOKUP=1 npm run data && tsc --noEmit -p tsconfig.ui.json && node --test tests/discovery.test.mjs tests/photo-lookup.test.mjs",
     "lint": "eslint . --ignore-pattern dist"
   },
   "dependencies": {
