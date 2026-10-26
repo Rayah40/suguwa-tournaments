@@ -1,0 +1,8 @@
+"use client";
+import {useState} from "react";
+import {PageIntro,SiteHeader,SiteFooter} from "../ui";
+import {useLang} from "../i18n";
+import {archivedTournaments} from "../tournaments";
+import {RegionFilter,regionOf,yearOf,EventCard} from "../discovery";
+export default function ArchivePage(){const{lang}=useLang();const ko=lang==="ko";const[r,setR]=useState("all"),[y,setY]=useState("all");const items=archivedTournaments.filter(t=>(r==="all"||regionOf(t)===r)&&(y==="all"||yearOf(t)===y));const years=[...new Set(archivedTournaments.map(yearOf))].sort().reverse();return <main><SiteHeader active="Archive"/><PageIntro eyebrow={ko?"지난 대회 정보":"HISTORICAL DIRECTORY"} title={ko?"다음 시즌을 위한 기록.":"Inspiration for next season."} text={ko?"종료된 대회의 참가 조건·경기 방식·공식 출처를 보존합니다.":"Past events retain their eligibility, format and official sources."}/><section className="route-content"><RegionFilter value={r} onChange={setR} items={archivedTournaments}/><div className="filter-bar"><label>{ko?"연도":"Year"}<select value={y} onChange={e=>setY(e.target.value)}><option value="all">{ko?"전체 연도":"All years"}</option>{years.map(year=><option key={year}>{year}</option>)}</select></label><span aria-live="polite">{items.length} {ko?"개 대회":"events"}</span></div>{years.filter(year=>items.some(t=>yearOf(t)===year)).map(year=><section className="archive-year" key={year}><h2>{year}</h2><div className="card-grid">{items.filter(t=>yearOf(t)===year).map(t=><EventCard key={t.id} t={t}/>)}</div></section>)}{!items.length&&<p className="empty">{ko?"조건에 맞는 지난 대회가 없습니다.":"No matching past events."}</p>}</section><SiteFooter/></main>}
+

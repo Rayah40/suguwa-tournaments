@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-10-19",
+  "headline_ko": "지난 대회 4개 추가, Pan Pacific 접수 종료, Barcelona Masters Cup 사전등록 정보를 반영했습니다.",
+  "headline_en": "Four archive additions, Pan Pacific entry closure and Barcelona Masters Cup pre-registration updated.",
+  "changes": [
+    {
+      "tournament_id": "TRN-2026-USA-MIA-001",
+      "change_type": "OTHER",
+      "label_ko": "신규 수집 · 지난 대회",
+      "label_en": "NEW ARCHIVE RECORD",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "2026년 5월 29–31일 종료된 대회입니다. 성인 Open 남녀·남자 40+/50+ 부문을 수록했습니다. 청소년 전용 부문은 제외했습니다. WP4 비치 수구: 필드 3명+골키퍼 1명, 최대 등록 인원 7명. 경기시간·공격시간 등 세부 규정은 미확인입니다.",
+      "summary_en": "WP4 beach water polo: 3 field players + goalkeeper; maximum roster 7. Other match timing and shot-clock details not officially stated.\n3 field players + 1 goalkeeper in water per team\nMaximum 7 registered players per team\nRegistration form must be completed by coach or official club representative, not individual players\nOpen Men/Open Women and Men 40+/50+ divisions are offered"
+    },
+    {
+      "tournament_id": "TRN-2026-ESP-MAL-001",
+      "change_type": "OTHER",
+      "label_ko": "신규 수집 · 지난 대회",
+      "label_en": "NEW ARCHIVE RECORD",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "2026년 종료 대회입니다. 연맹 등록 선수이며 주최 측 표현상 16세 초과 대상입니다. 남녀·혼성, 팀·개인 참가 가능. 2027년 6월 재개 예고는 있으나 정확한 날짜·자격·규정은 미확정입니다. 5대5(필드 4+골키퍼 1), 코트 20×10m, 팀 최소 8명. 개인은 WP CAMP STARS 합류 가능. 대회 방식은 참가팀 수에 따라 정합니다.",
+      "summary_en": "5-on-5 beach water polo on a 20m × 10m field; minimum 8-player team; individual entry to WP CAMP STARS.\n4 field players + 1 goalkeeper in water per team\n20m × 10m playing field\nMinimum 8 registered players per team\nAthletes must be registered with a sports federation and over 16\nIndividual entrants may join the WP CAMP STARS team\nTournament format depends on the number of entered teams"
+    },
+    {
+      "tournament_id": "TRN-2026-GRC-001",
+      "change_type": "OTHER",
+      "label_ko": "신규 수집 · 지난 대회",
+      "label_en": "NEW ARCHIVE RECORD",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "2026년 종료 대회입니다. 남녀·혼성 Masters, 평균 35세 이상(엄격한 제한 아님). 서로 다른 클럽 선수로 팀 구성 가능하며 최대 17명입니다. 4×6분 러닝타임, 피리어드 사이 1분 30초, 팀당 타임아웃 1회, 퇴장 18초. 8팀씩 2개 조 풀리그에서 최소 7경기. 각 조 상위 2팀 Final Four로 추가 2경기, 조별 무승부 허용·토너먼트 동점은 5+5 승부던지기입니다.",
+      "summary_en": "4×6-minute running-clock matches; one timeout per team; 18-second exclusion; seven games guaranteed and Final Four knockout.\n4 × 6 minutes, running clock; 1m30s interval between periods\nSeven group matches guaranteed per team\nTop two from each of two groups advance to Final Four, playing two additional matches\nGroup draws permitted; knockout draws decided by penalty shootout (5+5)\n18-second exclusion time\nMixed-club team rosters allowed\nMaximum 17 players per team"
+    },
+    {
+      "tournament_id": "TRN-2026-SVK-EAM-001",
+      "change_type": "OTHER",
+      "label_ko": "신규 수집 · 지난 대회",
+      "label_en": "NEW ARCHIVE RECORD",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "European Aquatics 주최의 2026년 종료 대회입니다. World Aquatics 주최 대회와 구분합니다. 소속 연맹 승인·클럽 가입 6개월 이상, 비유럽 국적 최대 4명, 최연소 선수로 연령 구분. 여자 30+, 남자 35+부터 5세 단위이며 para 클럽 조항·여자 선수의 남자팀 합류 조항이 있습니다. 50세 미만 4×6분, 50+ 4×5분 실제 경기시간. 공격시간 35초·퇴장 25초, 경기장 최소 17×17m입니다.",
+      "summary_en": "Masters-specific rules: 4×6 minutes (<50) or 4×5 minutes (50+), 35-second shot clock, 25-second exclusion, minimum 17×17m field.\n4 × 6 minutes actual play (under 50); 4 × 5 minutes actual play (50+)\nMinimum playing field length and width 17m × 17m\n25-second exclusion time\nClub must be federation-affiliated; player must have been under club jurisdiction at least 6 months\nMaximum four players without European nationality per team\nMen, women and para club team categories; women may join men’s teams\nAge group determined by youngest team member\nClubs must obtain federation approval of entry"
+    },
+    {
+      "tournament_id": "TRN-2026-AUS-001",
+      "change_type": "OTHER",
+      "label_ko": "팀·개인 접수 종료",
+      "label_en": "ALL ENTRY DEADLINES PASSED",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "팀 10월 11일·개인 10월 18일 23:59 AEST 마감이 모두 지났습니다. 공식 마감일 기준 종료이며, 포털 접근 제한으로 늦은 접수 예외는 확인되지 않았습니다.",
+      "summary_en": "Both published deadlines have passed: team October 11 and individual October 18, 23:59 AEST. Late-entry exceptions could not be verified because portal access was restricted."
+    },
+    {
+      "tournament_id": "TRN-2027-ESP-001",
+      "change_type": "OTHER",
+      "label_ko": "2027 사전등록·참가비 확인",
+      "label_en": "2027 PRE-REGISTRATION VERIFIED",
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "2027년 전용 팀 사전등록 양식과 연령 부문·참가비가 공개됐습니다. 사전등록은 최종 결제 등록과 구분합니다. 숙박 제외 EUR 245/인(첫 11명·최소 9명), 12–16번째 선수 무료입니다.",
+      "summary_en": "The 2027 team pre-registration form, age categories and prices are now available. This is not confirmation of final paid entry. No-hotel entry costs EUR 245/player for the first 11, minimum 9; players 12–16 are free."
+    }
+  ]
+}

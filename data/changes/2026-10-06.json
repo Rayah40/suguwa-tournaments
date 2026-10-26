@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-06",
+  "headline_ko": null,
+  "headline_en": null,
+  "changes": [
+    {
+      "tournament_id": "TRN-2027-ESP-001",
+      "change_type": "OTHER",
+      "label_ko": "대회명·일정 재확인",
+      "label_en": "EVENT IDENTITY VERIFIED",
+      "before_ko": "Masters Cup",
+      "after_ko": "Barcelona Masters Cup · 2027년 5월 28–30일",
+      "before_en": "Masters Cup",
+      "after_en": "Barcelona Masters Cup · May 28–30, 2027",
+      "summary_ko": "주최 측 목록에서 2027년 5월 28–30일 바르셀로나 개최를 재확인했습니다. 개별 Masters 페이지의 2026년 참가비·규정은 2027년 정보로 옮기지 않았습니다.",
+      "summary_en": "The organizer's list confirms May 28–30, 2027 in Barcelona. The dedicated Masters page still contains 2026 details; those fees and rules are not copied into the 2027 listing."
+    },
+    {
+      "tournament_id": "TRN-2027-ESP-002",
+      "change_type": "OTHER",
+      "label_ko": "공식 자료 간 날짜 차이",
+      "label_en": "DATE SOURCE DISCREPANCY",
+      "before_ko": "Beach Water Polo",
+      "after_ko": "Costa Brava · 팔라모스 · 8월 일정 재확인 필요",
+      "before_en": "Beach Water Polo",
+      "after_en": "Costa Brava · Palamós · August dates need reconfirmation",
+      "summary_ko": "팔라모스에서 열리는 별개 대회입니다. 영문 목록은 2027년 8월 27–29일, 스페인어 목록은 8월 28–30일을 안내합니다. 영문 기준 일정을 표시하되 주최 측 재확인 필요로 표시했습니다. 7월 일정은 확인되지 않았습니다.",
+      "summary_en": "This separate event takes place in Palamós. The English list announces August 27–29, 2027, while the Spanish list shows August 28–30. The displayed English dates require organizer reconfirmation; July was not verified."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-05",
+  "headline_ko": null,
+  "headline_en": null,
+  "changes": [
+    {
+      "tournament_id": "TRN-2026-USA-003",
+      "change_type": "OTHER",
+      "label_ko": "접수 시작",
+      "label_en": "REGISTRATION OPENED",
+      "before_ko": "접수 예정",
+      "after_ko": "접수 중",
+      "before_en": "Upcoming",
+      "after_en": "Open",
+      "summary_ko": "USAWP Sport80를 통한 접수가 시작됐습니다. 로그인이 필요하며 주최 측이 마감일과 참가비는 아직 발표하지 않았습니다.",
+      "summary_en": "Registration is now open through USAWP Sport80. Authentication is required; no deadline or fee has been published by the organizer."
+    },
+    {
+      "tournament_id": "TRN-2027-ZAF-001",
+      "change_type": "OTHER",
+      "label_ko": "개최 장소 변경",
+      "label_en": "VENUE CHANGED",
+      "before_ko": "Michaelhouse",
+      "after_ko": "Kearsney College",
+      "before_en": "Michaelhouse",
+      "after_en": "Kearsney College",
+      "summary_ko": "개최지가 Michaelhouse에서 Kearsney College로 변경됐습니다. 온수 수영장 3개와 기숙 숙박이 안내됐으며 접수 양식은 추후 공개됩니다.",
+      "summary_en": "The venue changed from Michaelhouse to Kearsney College, KZN. Three heated pools and boarding accommodation are confirmed; entry forms are forthcoming."
+    },
+    {
+      "tournament_id": "TRN-2026-NZL-002",
+      "change_type": "OTHER",
+      "label_ko": "종료 · 지난 대회로 이동",
+      "label_en": "PAST · MOVED TO ARCHIVE",
+      "before_ko": "접수 중",
+      "after_ko": "종료 · 지난 대회",
+      "before_en": "Open",
+      "after_en": "Past · Archive",
+      "summary_ko": "Auckland Masters가 10월 4일 종료되어 지난 대회로 이동했습니다. 기존 접수 링크와 미확정 경기방식 기록은 보존됩니다.",
+      "summary_en": "Auckland Masters concluded Oct 4 and moved to the archive. Prior registration links and unresolved format notes are retained."
+    }
+  ]
+}
