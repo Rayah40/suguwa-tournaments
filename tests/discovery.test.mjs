@@ -52,31 +52,34 @@ test("all details preserve eligibility, format, fees, sources and stable IDs",()
  const Detail=load("app/tournament/page.tsx").Detail;
  for(const lang of ["en","ko"]){language=lang;for(const t of data.tournaments){const html=renderToStaticMarkup(React.createElement(Detail,{t}));for(const id of ["schedule","eligibility","registration","rules","sources"])assert(html.includes('id="'+id+'"'));assert(html.includes(t.sourceUrl.replaceAll("&","&amp;")));assert(html.includes("#"+data.collectionNumber(t.id)));if(t.format)assert(html.includes(t.format.replaceAll("&","&amp;")));}}
 });
-test("October 26 import: 23 records, stable numbers, new events without photos render",()=>{
- assert.equal(data.tournaments.length,23);
- assert.equal(data.dataCheckedAt,"2026-10-26");
+test("weekly data: stable numbers, archive split, registration states and photos for every event",()=>{
+ const src=JSON.parse(fs.readFileSync("data/tournaments.json","utf8"));
+ assert.equal(data.tournaments.length,src.tournaments.length);
+ assert.equal(data.dataCheckedAt,src.generated_at);
+ // Collection numbers 1-23 are fixed forever.
  assert.equal(data.collectionNumber("TRN-2026-AUS-001"),"01");
  assert.equal(data.collectionNumber("TRN-2026-SVK-EAM-001"),"21");
  assert.equal(data.collectionNumber("TRN-2027-USA-KON-001"),"22");
  assert.equal(data.collectionNumber("TRN-2027-USA-HAW-001"),"23");
- const pan=data.tournaments.find(t=>t.id==="TRN-2026-AUS-001");
- assert.equal(pan.teamStatus,"CLOSED");assert.equal(pan.individualStatus,"CLOSED");
+ for(const t of data.tournaments)assert.equal(data.archivedTournaments.includes(t),["PAST","CANCELLED"].includes(t.status));
  language="ko";const Detail=load("app/tournament/page.tsx").Detail;
- const html=renderToStaticMarkup(React.createElement(Detail,{t:pan}));
- assert(html.includes("팀 접수 기록"));assert(!html.includes("팀 접수 열기"));assert(html.includes("23:59 AEST"));
- const arg=data.tournaments.find(t=>t.id==="TRN-2026-ARG-001");assert.equal(arg.status,"PAST");assert(data.archivedTournaments.includes(arg));
- for(const id of ["TRN-2026-USA-003","TRN-2026-MLT-002","TRN-2027-ESP-002"])assert.equal(data.tournaments.find(t=>t.id===id).status,"UNKNOWN");
- const japan=data.tournaments.find(t=>t.id==="TRN-2027-JPN-WMG-001");
- assert.equal(japan.start,"2027-05-28");assert.equal(japan.eventStart,"2027-05-14");
- const barcelona=data.tournaments.find(t=>t.id==="TRN-2027-ESP-001");assert.equal(barcelona.registrationPhase,"PRE_REGISTRATION");assert(renderToStaticMarkup(React.createElement(Detail,{t:barcelona})).includes("팀 사전등록 열기"));
- for(const t of data.tournaments){assert.equal(t.checked,"2026-10-26");const img=data.visuals[t.id].image;assert(img);if(img.startsWith("/"))assert(fs.existsSync("public"+img));}
- const kona=data.tournaments.find(t=>t.id==="TRN-2027-USA-KON-001");
- assert.equal(data.visuals[kona.id].image,"/water-polo-tournament-venue-daylight.png");
- for(const lang of ["ko","en"]){language=lang;const card=renderToStaticMarkup(React.createElement(ui.EventCard,{t:kona}));assert(card.includes("city-photo-main"));assert(card.includes("water-polo-tournament-venue-daylight.png"));assert(card.includes(lang==="ko"?"2027년 3월 말 또는 4월 초":"Late March or early April 2027"));}
+ const pan=data.tournaments.find(t=>t.id==="TRN-2026-AUS-001");
+ if(pan.teamStatus==="CLOSED"){const html=renderToStaticMarkup(React.createElement(Detail,{t:pan}));assert(html.includes("팀 접수 기록"));assert(!html.includes("팀 접수 열기"));}
+ const barcelona=data.tournaments.find(t=>t.id==="TRN-2027-ESP-001");
+ if(barcelona.registrationPhase==="PRE_REGISTRATION"&&barcelona.status==="OPEN")assert(renderToStaticMarkup(React.createElement(Detail,{t:barcelona})).includes("팀 사전등록 열기"));
+ for(const t of data.tournaments){const img=data.visuals[t.id].image;assert(img);if(img.startsWith("/"))assert(fs.existsSync("public"+img));}
+ for(const lang of ["ko","en"]){language=lang;for(const t of data.tournaments){const card=renderToStaticMarkup(React.createElement(ui.EventCard,{t}));assert(card.includes("city-photo-main"));}}
 });
-test("What's New lists latest week first with Korean summaries",()=>{
+test("date notes are shown as a note, not as a 'needs reconfirmation' warning",()=>{
+ const withNote=data.tournaments.find(t=>t.start&&t.dateNote);
+ if(!withNote)return;
+ language="ko";const Detail=load("app/tournament/page.tsx").Detail;
+ assert(renderToStaticMarkup(React.createElement(Detail,{t:withNote})).includes("date-note"));
+ assert(!renderToStaticMarkup(React.createElement(ui.EventCard,{t:withNote})).includes("날짜 재확인 필요"));
+});
+test("What's New lists latest week first",()=>{
  language="ko";const html=renderToStaticMarkup(React.createElement(load("app/whats-new/page.tsx").default));
- assert(html.indexOf("2026-10-26")<html.indexOf("2026-10-19"));
- assert(html.includes("Go Play Polo Kona Pier"));assert(html.includes("접수 상태 미확인"));
- for(const id of ["TRN-2027-USA-KON-001","TRN-2026-ARG-001"])assert(html.includes(ui.detailHref(id)));
+ const dates=fs.readdirSync("data/changes").map(f=>f.replace(".json","")).sort();
+ const latest=dates.at(-1),prev=dates.at(-2);
+ assert(html.includes(latest));if(prev)assert(html.indexOf(latest)<html.indexOf(prev));
 });

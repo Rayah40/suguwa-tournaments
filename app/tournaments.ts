@@ -95,7 +95,7 @@ function toTournament(r: Raw): Tournament {
     end: t.water_polo_end_date ?? null,
     eventStart: t.start_date ?? null,
     eventEnd: t.end_date ?? null,
-    dateNeedsReview: Boolean(t.date_note && t.water_polo_start_date),
+    dateNeedsReview: false,
     dateNote: t.date_note ?? null,
     status: status(t.registration_status),
     deadline: t.registration_deadline ?? null,

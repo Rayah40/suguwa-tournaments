@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-11-02",
+  "headline_ko": "공식 규정으로 확인된 브라질 마스터즈 수구대회 1건을 추가하고, 남아공 개최지 및 기존 대회 설명 오류 5건을 정정했습니다.",
+  "headline_en": "One officially verified Brazilian masters water polo event was added, and five existing records received venue or stale-description corrections.",
+  "changes": [
+    {
+      "tournament_id": "TRN-2026-BRA-CBEM-001",
+      "change_type": "NEW",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": null,
+      "before_en": null,
+      "after_en": null,
+      "summary_ko": "브라질 리우데자네이루 CBEM Master Games Brasil 2026 수구대회를 아카이브에 신규 추가했습니다. 연맹 등록 여부와 관계없는 마스터즈 참가(특정 1부리그 선수 제외), 7대7, 연령별 4×7분/4×6분, 공격시간 35초/20초, 로스터 최대 15명을 공식 기술규정에서 확인했습니다.",
+      "summary_en": "Added the completed CBEM Master Games Brasil 2026 Water Polo tournament in Rio de Janeiro. Official regulations confirm masters eligibility for federated and non-federated players (with elite first-division exclusions), 7-on-7, age-dependent 4×7/4×6-minute periods, 35s/20s shot clock, and a 15-player roster cap."
+    },
+    {
+      "tournament_id": "TRN-2027-ZAF-001",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": "남아프리카공화국 콰줄루나탈의 Kearsney College에서 열리는 2027 마스터즈 대회입니다. 이전에 거론된 Michaelhouse 대신 Kearsney College가 공식 개최지로 확정됐습니다.",
+      "before_en": "Official SA Masters site confirms Michaelhouse, KZN for 2027-03-31 to 2027-04-03. Michaelhouse's official address identifies Balgowan, KwaZulu-Natal.",
+      "after_en": "SA Masters Water Polo confirmed Kearsney College, Botha's Hill, KwaZulu-Natal, as the 2027 venue in its newer 17 September 2026 official announcement. The older dedicated page still says Michaelhouse and is superseded. Dates remain 2027-03-31 to 2027-04-03. Three heated pools and boarding accommodation are secured.",
+      "summary_ko": "공식 공지에 따라 개최지를 Kearsney College로 통일하고 Michaelhouse 확정이라는 오래된 영문 notes를 정정했습니다. 날짜는 그대로입니다.",
+      "summary_en": "Corrected stale notes that still said Michaelhouse was confirmed; the newer organizer notice confirms Kearsney College. Dates unchanged."
+    },
+    {
+      "tournament_id": "TRN-2026-USA-003",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": "미국 플로리다주 세인트피터즈버그에서 열리는 마스터즈 수구대회입니다. 남자 8팀과 여자 오픈 스크리미지가 예정되어 있습니다.",
+      "before_en": "Official organizer still states registration link coming soon; 8-10 open men's teams, four games guaranteed, and one-hour open women's scrimmage each day.",
+      "after_en": "The organizer lists the 2026-11-14 to 2026-11-15 Masters tournament, eight men's teams and four guaranteed matches, plus one-hour open women's scrimmages each day. A Register on USAWP link exists, but its Sport80 destination requires authentication; current submission availability is unverified.",
+      "summary_ko": "Fall Brawl의 영문 notes와 등록 설명을 현재 공식 페이지에 맞게 동기화했습니다. OPEN으로 단정하지 않습니다.",
+      "summary_en": "Updated Fall Brawl notes to reflect the existing USAWP link and login barrier; OPEN is not confirmed."
+    },
+    {
+      "tournament_id": "TRN-2026-NZL-002",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": "뉴질랜드 오클랜드에서 개최된 마스터즈 대회입니다. 팀과 개인 모두 신청 가능했던 2026년 대회는 종료됐습니다.",
+      "before_en": "Auckland Masters is 2026-10-03 to 2026-10-04. Team and individual registrations are currently open. Venue and final 2026 competition details are still to follow.",
+      "after_en": "Auckland Masters took place on 2026-10-03 to 2026-10-04. The official page still advertises registration for that completed edition; this is an archived event, not a currently open registration.",
+      "summary_ko": "종료된 Auckland Masters에 남아 있던 OPEN 관련 영문 notes를 바로잡았습니다. 상태값 PAST는 유지됩니다.",
+      "summary_en": "Corrected stale OPEN wording in Auckland Masters notes; the PAST status itself was unchanged."
+    },
+    {
+      "tournament_id": "TRN-2026-ARG-001",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": "아르헨티나 부에노스아이레스에서 열린 범미주 마스터즈 종합대회의 수구 종목입니다. 수구 경기는 10월 25일 종료됐습니다.",
+      "before_en": "Official PanAm Aquatics page continues to list Water Polo registration. Registration deadline remains 2026-09-15.",
+      "after_en": "The Masters Water Polo competition ended on 2026-10-25. The overall multi-sport PanAm Aquatics Masters Championships ran through 2026-10-29. The archived registration link does not indicate active entry.",
+      "summary_ko": "PanAm Masters의 과거 접수 안내를 종료된 수구 일정에 맞게 정정했습니다.",
+      "summary_en": "Aligned PanAm Masters notes with the completed water polo competition and archived registration."
+    },
+    {
+      "tournament_id": "TRN-2026-AUS-001",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": null,
+      "after_ko": "호주 골드코스트에서 열리는 범태평양 마스터즈 게임 수구 종목입니다. 남녀 30세 이상 참가자가 팀 또는 개인 드래프트팀을 통해 참가할 수 있습니다.",
+      "before_en": "Official Pan Pacific Masters Games page still lists ENTER NOW. Team entries close 2026-10-11 and individual entries close 2026-10-18.",
+      "after_en": "Pan Pacific Masters Games Water Polo is scheduled for 2026-11-06 to 2026-11-08 (overall Games: 2026-11-06 to 2026-11-15). The published team and individual entry deadlines passed on 2026-10-11 and 2026-10-18 respectively; a lingering ENTER NOW button does not establish an extension.",
+      "summary_ko": "Pan Pacific Masters의 영문 notes를 공식 마감일 기준으로 정정했습니다. 상태값 CLOSED는 유지됩니다.",
+      "summary_en": "Corrected Pan Pacific Masters notes to emphasize the expired official deadlines; CLOSED status unchanged."
+    }
+  ]
+}
