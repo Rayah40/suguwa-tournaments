@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-09",
+  "generated_at": "2026-11-16",
   "report_timezone": "Asia/Seoul",
   "source_policy": "Official organizer/federation/registration sources and user-supplied official Malaysia Aquatics event poster. Unknown details remain null. Prior 2026-11-02 full JSON is unavailable for raw-byte recovery; 1–23 reconstructed from the readable 2026-10-26 archive.",
   "status_values": [
@@ -747,7 +747,7 @@
       ],
       "format_note": "WP4 (4-on-4) Masters water polo; detailed playing time, roster, shot clock and timeout rules not published in poster.",
       "notes": null,
-      "registration_note": "Official MAS poster: expression of interest deadline 2026-11-13 18:00 MYT; team entry deadline 2026-11-27 18:00 MYT. Submission form and live open status not independently accessible.",
+      "registration_note": "Official MAS poster: expression of interest deadline 2026-11-13 18:00 MYT has passed; team entry deadline 2026-11-27 18:00 MYT remains upcoming. Submission form and live open status not independently accessible.",
       "registration_phase": null,
       "team_registration_status": null,
       "individual_registration_status": null,
@@ -758,8 +758,8 @@
       "eligibility_note": null,
       "verification_status": "PARTIAL",
       "source_access_note": "Official Malaysia Aquatics Instagram poster supplied by user; Instagram direct retrieval throttled, registration link not identified.",
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-16",
+      "last_checked_at": "2026-11-16",
       "source_urls": [
         "https://www.instagram.com/p/DfO1XvTRxRG/"
       ],
@@ -774,7 +774,7 @@
         "city": "쿠알라룸푸르",
         "country": "말레이시아",
         "notes": "말레이시아 수영연맹이 주최하는 31~45세 및 46세 이상 WP4 마스터즈 수구선수권입니다. 쿠알라룸푸르 국립수영센터에서 열립니다.",
-        "registration": "참가 의향서 11월 13일 18:00 MYT, 팀 등록 11월 27일 18:00 MYT 마감 예정. 실제 온라인 접수 가능 여부는 미확인.",
+        "registration": "참가 의향 접수 마감(11월 13일 18:00 MYT)은 경과했습니다. 팀 등록 마감은 11월 27일 18:00 MYT이며, 실제 제출 가능 여부는 확인되지 않았습니다.",
         "format": "WP4(4대4) 형식. 공식 포스터는 월드 아쿠아틱스 규정 적용을 명시하지만 세부 경기시간 등은 미발표.",
         "date_note": "팀 매니저 회의 12월 3일 16:00 MYT."
       },
@@ -874,7 +874,7 @@
       "registration_open_date": null,
       "registration_deadline": null,
       "registration_deadline_timezone": null,
-      "registration_status": null,
+      "registration_status": "PAST",
       "entry_type": [
         "TEAM"
       ],
@@ -911,7 +911,7 @@
       ],
       "format_note": "Four games guaranteed; separate one-hour open women’s scrimmage each day.",
       "notes": null,
-      "registration_note": "USAWP Sport80 login required; eight teams listed, further team entry availability unknown.",
+      "registration_note": "USAWP Sport80 login required; eight teams listed, further team entry availability unknown. Event completed 2026-11-15; historical registration is closed.",
       "registration_phase": null,
       "team_registration_status": null,
       "individual_registration_status": null,
@@ -922,8 +922,8 @@
       "eligibility_note": null,
       "verification_status": "PARTIAL",
       "source_access_note": "USAWP Sport80 sign-in blocks entry status verification.",
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-16",
+      "last_checked_at": "2026-11-16",
       "source_urls": [
         "https://tampawaterpolo.com/tournament/"
       ],
@@ -938,7 +938,7 @@
         "city": "세인트피터즈버그",
         "country": "미국",
         "notes": "미국 플로리다 세인트피터즈버그에서 개최되는 성인 마스터즈 수구대회입니다.",
-        "registration": "공식 USAWP 로그인 뒤 접수 가능 여부 확인 필요.",
+        "registration": "2026년 11월 15일 대회 종료. 과거 접수는 마감되었습니다.",
         "format": "남자 8팀, 팀당 최소 4경기, 별도 여자 오픈 스크리미지.",
         "date_note": null
       },
@@ -954,7 +954,7 @@
       "registration_open_date": "2026-08-17",
       "registration_deadline": "2026-09-14",
       "registration_deadline_timezone": null,
-      "registration_status": "CLOSED",
+      "registration_status": "PAST",
       "entry_type": [
         "TEAM"
       ],
@@ -986,7 +986,7 @@
       "special_rules": null,
       "format_note": null,
       "notes": null,
-      "registration_note": "Team entries closed 2026-09-14; final lists due 2026-10-29.",
+      "registration_note": "Team entries closed 2026-09-14; final lists due 2026-10-29. Event completed 2026-11-15; historical registration is closed.",
       "registration_phase": null,
       "team_registration_status": null,
       "individual_registration_status": null,
@@ -997,8 +997,8 @@
       "eligibility_note": null,
       "verification_status": "VERIFIED",
       "source_access_note": null,
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-16",
+      "last_checked_at": "2026-11-16",
       "source_urls": [
         "https://nzwaterpolo.org.nz/nz-water-polo-masters-championships"
       ],
@@ -1013,7 +1013,7 @@
         "city": "로토루아",
         "country": "뉴질랜드",
         "notes": "뉴질랜드 로토루아에서 열리는 남녀 마스터즈 전국 수구선수권입니다.",
-        "registration": "팀 등록 9월 14일 마감. 대회 개최 예정.",
+        "registration": "2026년 11월 15일 대회 종료. 과거 접수는 마감되었습니다.",
         "format": "세부 경기규정 미확인.",
         "date_note": null
       },
