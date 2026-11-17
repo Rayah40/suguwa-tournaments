@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-11-16",
+  "headline_ko": "뉴질랜드·미국 마스터즈 수구대회 2건이 종료됐고 말레이시아 WP4 참가 의향 접수 마감일이 경과했습니다.",
+  "headline_en": "Two masters water polo events concluded and the Malaysia WP4 expression-of-interest deadline passed.",
+  "changes": [
+    {
+      "tournament_id": "TRN-2026-NZL-001",
+      "change_type": "PAST",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": "대회 개최 전",
+      "after_ko": "2026년 11월 15일 대회 종료",
+      "before_en": "CLOSED",
+      "after_en": "PAST",
+      "summary_ko": "NZ Water Polo Masters Championships 수구 경기 일정(11월 13~15일 또는 14~15일)이 종료되어 PAST로 전환.",
+      "summary_en": "NZ Water Polo Masters Championships ended on November 15, 2026 and is now PAST."
+    },
+    {
+      "tournament_id": "TRN-2026-USA-003",
+      "change_type": "PAST",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": "개최 예정(접수 여부 미확인)",
+      "after_ko": "2026년 11월 15일 대회 종료",
+      "before_en": "UNKNOWN",
+      "after_en": "PAST",
+      "summary_ko": "Fall Brawl Water Polo Tournament 수구 경기 일정(11월 13~15일 또는 14~15일)이 종료되어 PAST로 전환.",
+      "summary_en": "Fall Brawl Water Polo Tournament ended on November 15, 2026 and is now PAST."
+    },
+    {
+      "tournament_id": "TRN-2026-MYS-WP4-001",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": "참가 의향 접수 마감 예정(11월 13일)",
+      "after_ko": "참가 의향 접수 마감 경과, 팀 등록 마감 11월 27일 유지",
+      "before_en": "EOI deadline upcoming (Nov 13)",
+      "after_en": "EOI deadline passed; team deadline remains Nov 27",
+      "summary_ko": "참가 의향 접수 마감일이 지났으며 팀 등록 마감일은 11월 27일로 유지. 실제 등록 가능 여부는 미확인.",
+      "summary_en": "Expression-of-interest deadline passed Nov 13; team entry deadline remains Nov 27; live registration not verified."
+    }
+  ]
+}
