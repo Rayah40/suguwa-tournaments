@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-23",
+  "headline_ko": "남아공 SA Masters 2027 개최지 표기를 주최 측 최신 공지에 맞춰 정정했으며 신규 확정 대회는 없습니다.",
+  "headline_en": "The SA Masters 2027 venue notes were reconciled with the organizer’s latest dated announcement; no new events were confirmed.",
+  "changes": [
+    {
+      "tournament_id": "TRN-2027-ZAF-001",
+      "change_type": "OTHER",
+      "label_ko": null,
+      "label_en": null,
+      "before_ko": "남아공의 마스터즈 수구대회로 연령대별 핸디캡 골 규칙을 적용합니다. 공식 개최 장소 공지 간 충돌이 있어 확인이 필요합니다.",
+      "after_ko": "남아공 마스터즈 수구대회로 연령대별 핸디캡 골 규칙을 적용합니다. 주최 측의 2026년 9월 17일 공지에 따라 Kearsney College의 온수 수영장 3개에서 개최하는 것으로 확인했습니다.",
+      "before_en": "Venue conflicted across organizer pages",
+      "after_en": "Latest dated organizer notice confirms Kearsney College",
+      "summary_ko": "주최 측 9월 17일 공지가 Kearsney College 개최를 명확히 확정하므로 이전의 개최지 충돌 설명을 정정했습니다. 전용 페이지의 Michaelhouse 표기는 구형 정보로 판단됩니다.",
+      "summary_en": "Organizer homepage September 17 notice confirms Kearsney College; older Michaelhouse detail page appears outdated."
+    }
+  ]
+}
