@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-23",
   "report_timezone": "Asia/Seoul",
-  "source_policy": "Official organizer/federation/registration sources and user-supplied official Malaysia Aquatics event poster. Unknown details remain null. Prior 2026-11-02 full JSON is unavailable for raw-byte recovery; 1–23 reconstructed from the readable 2026-10-26 archive.",
+  "source_policy": "Official organizer/federation/registration sources, including official Malaysia Aquatics poster supplied by user. Only explicitly verified changes applied; unverified registration submission states remain unknown. The 2026-11-16 full dataset is preserved.",
   "status_values": [
     "ANNOUNCED",
     "UPCOMING",
@@ -291,8 +291,8 @@
       "eligibility_note": null,
       "verification_status": "VERIFIED",
       "source_access_note": null,
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-23",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
         "https://www.worldaquatics.com/competitions/5574/world-aquatics-masters-championships-budapest-2027"
       ],
@@ -450,8 +450,8 @@
       "eligibility_note": null,
       "verification_status": "VERIFIED",
       "source_access_note": null,
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-23",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
         "https://wmg2027.jp/competition/water-polo/"
       ],
@@ -595,8 +595,8 @@
         "Knockout draws decided by penalty shootout"
       ],
       "format_note": "Age handicap goals; 2×12 minutes, no timeouts and no extra time.",
-      "notes": null,
-      "registration_note": "Venue conflicting across official notices; user-supplied Kearsney College retained pending organizer confirmation.",
+      "notes": "Official organizer homepage notice dated 2026-09-17 confirms Kearsney College, KZN, with three heated pools; the older tournament detail page still displays Michaelhouse and is stale.",
+      "registration_note": "Organizer confirmed Kearsney College in September 17 notice; official entry forms promised, but current submission status and dates not independently confirmed.",
       "registration_phase": null,
       "team_registration_status": null,
       "individual_registration_status": null,
@@ -607,10 +607,11 @@
       "eligibility_note": null,
       "verification_status": "NEEDS_REVIEW",
       "source_access_note": "Dedicated official 2027 page currently names Michaelhouse; says Kearsney is backup. Previous official archive reportedly said Kearsney. Venue cannot be settled confidently.",
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-23",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
-        "https://www.samasterswaterpolo.co.za/tournaments/2027-michaelhouse-kzn/"
+        "https://www.samasterswaterpolo.co.za/tournaments/2027-michaelhouse-kzn/",
+        "https://www.samasterswaterpolo.co.za/"
       ],
       "tournament_id": "TRN-2027-ZAF-001",
       "name": "SA Masters Water Polo Tournament 2027",
@@ -622,10 +623,10 @@
       "ko": {
         "city": "보타스힐",
         "country": "남아프리카공화국",
-        "notes": "남아공의 마스터즈 수구대회로 연령대별 핸디캡 골 규칙을 적용합니다. 공식 개최 장소 공지 간 충돌이 있어 확인이 필요합니다.",
-        "registration": "접수 시작·마감일 미발표.",
+        "notes": "남아공 마스터즈 수구대회로 연령대별 핸디캡 골 규칙을 적용합니다. 주최 측의 2026년 9월 17일 공지에 따라 Kearsney College의 온수 수영장 3개에서 개최하는 것으로 확인했습니다.",
+        "registration": "주최 측에서 참가신청서 제공을 예고했으나 실제 신청서 공개 및 접수 가능 여부는 확인되지 않았습니다.",
         "format": "12분씩 2회, 연령차 핸디캡 골, 타임아웃·연장전 없음.",
-        "date_note": "기존 기록 Kearsney College와 현재 공식 전용 페이지 Michaelhouse 표기가 충돌함."
+        "date_note": "2027년 3월 31일~4월 3일. 과거 전용 페이지의 Michaelhouse 표기는 최신 주최 측 공지와 일치하지 않습니다."
       },
       "visual": null
     },
@@ -683,8 +684,8 @@
       "eligibility_note": null,
       "verification_status": "PARTIAL",
       "source_access_note": "Official pages return 403; indexed official page shows not yet open.",
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-23",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
         "https://www.waterpolonsw.org.au/wpnsw-events/masters-championships-27"
       ],
@@ -759,7 +760,7 @@
       "verification_status": "PARTIAL",
       "source_access_note": "Official Malaysia Aquatics Instagram poster supplied by user; Instagram direct retrieval throttled, registration link not identified.",
       "last_verified_at": "2026-11-16",
-      "last_checked_at": "2026-11-16",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
         "https://www.instagram.com/p/DfO1XvTRxRG/"
       ],
@@ -842,8 +843,8 @@
       "eligibility_note": null,
       "verification_status": "PARTIAL",
       "source_access_note": "Google Form inaccessible to automated read.",
-      "last_verified_at": "2026-11-09",
-      "last_checked_at": "2026-11-09",
+      "last_verified_at": "2026-11-23",
+      "last_checked_at": "2026-11-23",
       "source_urls": [
         "https://barracudasmalta.org/2026/06/04/gozo-to-host-second-international-masters-water-polo-tournament/"
       ],
